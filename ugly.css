@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Top scrolling banner */
+marquee {
+  background: yellow;
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Title chaos */
+.title {
+  font-size: 56px;
+  color: lime;
+  text-shadow: 4px 4px red, -4px -4px blue;
+  margin-top: 30px;
+  animation: shake 0.2s infinite;
+}
+
+/* Image (before video starts) */
+.speed-img {
+  width: 320px;
+  max-width: 80%;
+  border: 10px dashed cyan;
+  transform: rotate(-6deg);
+  box-shadow: 0 0 30px magenta;
+  margin-top: 20px;
+}
+
+/* ✅ VIDEO (matches ./clip.mp4 setup) */
+.speed-video {
+  display: none;              /* hidden at first */
+  width: 420px;
+  max-width: 90%;
+  margin: 20px auto;          /* center horizontally */
+  border: 8px solid yellow;
+  box-shadow: 0 0 25px red;
+  background: black;          /* prevents weird gray box */
+}
+
+/* Rules text */
+.rules {
+  font-size: 22px;
+  letter-spacing: 3px;
+  padding: 20px;
+  color: yellow;
+}
+
+/* Button */
+#startBtn {
+  background: magenta;
+  color: cyan;
+  border: 6px dotted yellow;
+  padding: 18px 34px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-family: inherit;
+}
+
+#startBtn:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 15%;
+  right: 5%;
+  background: red;
+  color: white;
+  font-size: 28px;
+  padding: 20px 28px;
+  border: 6px solid yellow;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 0 20px white;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(4px, -4px); }
+  50% { transform: translate(-4px, 4px); }
+  75% { transform: translate(4px, 4px); }
+  100% { transform: translate(-4px, -4px); }
+}
